@@ -1,0 +1,34 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model Category {
+  id String @id @default(cuid()) @map("_id")
+  slug String @unique 
+  title String
+  desc String
+  img String?
+  posts Post[]
+}
+
+model Post {
+  id String @id @default(cuid()) @map("_id")
+  slug String @unique 
+  title String
+  desc String
+  body String
+  img String?
+  catSlug String 
+  cat Category @relation(fields: [catSlug], references: [slug])
+  createdAt DateTime @default(now())
+  featured Boolean @default(false)
+}
