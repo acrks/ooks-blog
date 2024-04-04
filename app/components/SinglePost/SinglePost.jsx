@@ -3,7 +3,6 @@ import {getDate} from '@/app/api/functions'
 import Image from 'next/image'
 
 const SinglePost = ({title, img, body, createdAt}) => {
-  console.log(body)
   return (
   <div className='flex flex-col mt-[30px] p-10 justify-center items-center'>
     {/* Image Container */}
