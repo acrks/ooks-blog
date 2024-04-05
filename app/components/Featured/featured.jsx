@@ -9,8 +9,8 @@ const Featured = ({featuredPosts}) => {
   if(featuredPosts.length == 1) {
     const featuredPost = featuredPosts[0];
     return (
-      <div className="flex-row items-center mt-[30px] z-10">
-        <h1 className='text-[60px]'>{header}</h1>
+      <div className="flex-row items-center mt-[50px] gap-y-10 z-10">
+        <h1 className='text-[50px] mb-[50px]'><b>{header}</b></h1>
         <CarouselCard post={featuredPost}/>
       </div>
     )

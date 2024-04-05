@@ -1,8 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react'
 import CarouselCard from '@/app/components/Carousel/CarouselCard'
-import Link from 'next/link'
-import Image from 'next/image'
 
 const Carousel = ({posts}) => {
     const [index, setIndex] = useState(0);
@@ -39,7 +37,7 @@ const Carousel = ({posts}) => {
                 post={post}/>
             ))}
             </div>
-            <div className="flex flex-col justify-center items-center w-full mt-[10px]">
+            <div className="flex flex-col justify-center items-center w-full mt-[25px]">
             <div className='w-1/3 flex flex-row justify-center gap-5'>
                 {rows}
                 </div>

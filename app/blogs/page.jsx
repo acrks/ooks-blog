@@ -8,7 +8,7 @@ const page = async () => {
   const categories = await getAllCategoriesAndPosts();
 
   return (
-    <div className='flex flex-col p-10 gap-10'>
+    <div className='flex flex-col page-div gap-10'>
       {categories?.map((category) => (
         <CategoryPagePostList 
         {...category}/>

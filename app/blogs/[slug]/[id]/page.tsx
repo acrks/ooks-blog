@@ -10,7 +10,7 @@ const SinglePostPage = async ({ params }: { params: { slug: string, id:string } 
   const data = await getSinglePostByCatSlugAndSlug(params.slug, params.id);
 
   return (
-    <div className="p-10">
+    <div className="page-div">
         <SinglePost 
             img = {data.img}
             body = {data.body}

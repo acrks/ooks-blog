@@ -10,10 +10,11 @@ const Home = async () => {
   const recentPosts = await getRecentPosts();
 
   return (
-    <main className="flex min-h-screen flex-col items-left p-24">
-            {/* Title */}
+    <main className="flex min-h-screen flex-col items-left p-24 pt-60">
+      {/* Title */}
       <h1 className='text-[96px]'>
-      <b>Hey, Alex here!</b><br/>Read up on what projects I have cooking and my past work.
+      <b>Hey, Alex here!</b><br/>
+      <span className='text-[60px]'>Read up on what projects I have in the pipeline, as well as various other writings</span>
       </h1>
     <Featured
       featuredPosts = {featuredPosts}

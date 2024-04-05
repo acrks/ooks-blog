@@ -13,7 +13,7 @@ const CatPage = async ({ params }: { params: { slug: string } }) => {
   }
 
   return (
-    <div className="p-10">
+    <div className="page-div">
       <CategoryPostList
       posts={posts} />
     </div>

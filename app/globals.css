@@ -42,6 +42,11 @@ body {
   }
 }
 
+.page-div {
+  margin-top: 100px;
+  padding: 2.5rem;
+}
+
 .buttonhover {
   border: 8px solid;
   border-image: repeating-linear-gradient(135deg, #6366f1 0 30px) 8;
