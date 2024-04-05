@@ -7,8 +7,6 @@ import ThemeToggle from './themeToggle'
 
 
 const Header = () => {
-
-
   return (
     <header className='w-full p-4 px-10 flex items-center justify-between z-20'>
         <nav className='w-max py-3 px-8 border border-solid border-dark rounded-full font-medium capitalize flex items-center fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm'>

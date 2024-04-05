@@ -1,30 +1,10 @@
 import React from 'react'
 import CategoryPostList from '@/app/components/CategoryPostList/CategoryPostList'
-import prisma from '@/utils/connect';
-import { NextResponse } from "next/server"
-
-const getData = async (slug: string) => {
-  try {
-      const category = await prisma.category.findUnique({
-          where: {
-              slug
-          },
-          include: {
-            posts: true,
-          },
-      })
-      return category
-  } catch (err) {
-      console.log(err)
-      return new NextResponse(
-          JSON.stringify({message: "Something went wrong!"})
-      );
-  }
-}
+import { getCategoryAndPostsBySlug } from '@/app/api/functions'
 
 const CatPage = async ({ params }: { params: { slug: string } }) => {
 
-  const data = await getData(params.slug)
+  const data = await getCategoryAndPostsBySlug(params.slug)
 
   let posts = []
 
@@ -33,7 +13,7 @@ const CatPage = async ({ params }: { params: { slug: string } }) => {
   }
 
   return (
-    <div>
+    <div className="p-10">
       <CategoryPostList
       posts={posts} />
     </div>

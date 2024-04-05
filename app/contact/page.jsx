@@ -1,22 +1,20 @@
 import React from 'react'
 import Carousel from '@/app/components/Carousel/Carousel'
-import { NextResponse } from 'next/server'
-import prisma from '@/utils/connect'
-
-const getFeaturedPosts = async () => {
-    try {
-      const posts = await prisma.post.findMany()
-      return posts
-    } catch (err) {
-      console.log(err)
-      return new NextResponse(
-          JSON.stringify({message: "Something went wrong!"}, {status: 500})
-      );
-  }
-}
+import { getFeaturedPosts, getRecentPosts } from '../api/functions'
+import Featured from '../components/Featured/featured';
 
 const page = async () => {
-    const featuredPosts = await getFeaturedPosts();
+    // TODO: CHANGE TO getFeaturedPosts
+    const featuredPosts = await getRecentPosts();
+
+    if (featuredPosts.length == 1) {
+        return (
+            <div>
+                <Featured 
+                featuredPosts={featuredPosts} />
+            </div>
+        )
+    }
 
   return (
     <div className='p-10'>

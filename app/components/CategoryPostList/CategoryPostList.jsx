@@ -4,7 +4,7 @@ import PostListCard from '@/app/components/PostList/PostListCard.jsx'
 const CategoryPostList = ({posts}) => {
     let element = "";
 
-    if(data?.length === 0) {
+    if(posts?.length === 0) {
         element = (
         <h1 className='text-[30px]'>
             No posts for this category! Please come back later for some amazing content
@@ -27,7 +27,6 @@ const CategoryPostList = ({posts}) => {
             </div>
             </>
         )
-        
     }
   return (
     <div className='mt-[30px] flex-row grow justify-start text-center'>
