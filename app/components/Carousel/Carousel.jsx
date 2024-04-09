@@ -23,7 +23,7 @@ const Carousel = ({posts}) => {
 
       const rows = [];
         for (let i = 0; i < length; i++) {
-            rows.push(<div className={`w-[50px] h-[10px] rounded-full cursor-pointer ${i == index ? "bg-slate-600 scale-[1.1] drop-shadow-[0_0_7px_rgba(99,102,241,0.5)]": "bg-slate-900 drop-shadow-[0px_0px_5px_rgba(99,102,241,0.25)]"}`} key={i} onClick={() => handleClick(i)}/>)
+            rows.push(<div className={`w-[50px] h-[10px] rounded-full cursor-pointer ${i == index ? "bg-slate-600 scale-[1.1] drop-shadow-[0_0_7px_rgba(253,224,71,0.5)]": "bg-slate-900 drop-shadow-[0px_0px_5px_rgba(253,224,71,0.25)]"}`} key={i} onClick={() => handleClick(i)}/>)
         }
       
       return (

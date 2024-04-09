@@ -8,7 +8,7 @@ import {getDate} from '@/app/api/functions'
 const PostListCard = ({img, title, desc, createdAt, catSlug, slug}) => {
 
   return (
-    <div className='flex flex-row h-[400px] bg-[#16131a] rounded-lg drop-shadow-[0px_0px_5px_rgba(99,102,241,0.25)] hover:scale-[1.01] hover:drop-shadow-[0_0_10px_rgba(99,102,241,0.5)] transition-all duration-200'>
+    <div className='flex flex-row h-[400px] bg-[#16131a] rounded-lg drop-shadow-[0px_0px_5px_rgba(253,224,71,0.25)] hover:scale-[1.01] hover:drop-shadow-[0_0_10px_rgba(253,224,71,0.5)] transition-all duration-200'>
     {/* Image Container */}
     <div className='flex pr-[50px] overflow-hidden w-1/3 h-auto relative'>
         <Image src={img} alt="post list card here" className="w-full h-auto object-cover rounded-l-lg -z-49" fill={true}/>

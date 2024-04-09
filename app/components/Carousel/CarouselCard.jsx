@@ -6,7 +6,7 @@ const CarouselCard = ({post}) => {
   return (
     <div
       key={post.id} 
-      className={`flex flex-row flex-shrink-0 w-full items-center gap-[50px] bg-[#16131a] rounded-lg drop-shadow-[0px_0px_5px_rgba(99,102,241,0.25)] hover:scale-[1.01] hover:drop-shadow-[0_0_10px_rgba(99,102,241,0.5)] transition-all duration-200`}>    
+      className={`flex flex-row flex-shrink-0 w-full items-center gap-[50px] bg-[#16131a] rounded-lg drop-shadow-[0px_0px_5px_rgba(253,224,71,0.25)] hover:scale-[1.01] hover:drop-shadow-[0_0_10px_rgba(253,224,71,0.5)] transition-all duration-200`}>    
       {/* Image Container */}
       <div className="flex w-1/2 h-[500px] relative pr-10">
       <Image
