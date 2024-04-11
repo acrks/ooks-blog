@@ -2,7 +2,7 @@ import React from 'react'
 import CategoryPostList from '@/app/components/CategoryPostList/CategoryPostList'
 import { getCategoryAndPostsBySlug } from '@/app/api/functions'
 
-const CatPage = async ({ params }: { params: { slug: string } }) => {
+const CatPage = async ({ params }) => {
 
   const data = await getCategoryAndPostsBySlug(params.slug)
 

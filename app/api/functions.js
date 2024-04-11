@@ -23,7 +23,18 @@ export const getDate = (dateToConvert) => {
     const year = dateObj.getFullYear();
     const date = dateObj.getDate();
     return `${month}/${date}/${year}`;
-  }
+}
+
+export const getString = (string) => {
+    switch(string) {
+        case 'orca-medical':
+            return 'Orca Medical';
+        case 'friday-chaser':
+            return 'Friday Chaser';
+        default:
+            return;
+    }
+}
 
   export const getRecentPosts = async () => {
     try {
