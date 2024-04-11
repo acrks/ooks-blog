@@ -14,7 +14,7 @@ const Carousel = ({posts}) => {
  
         //Clearing the interval
         return () => clearInterval(interval);
-    }, [index]);
+      }, [index]);
 
       const handleClick = (i) => {
         console.log(i)
@@ -34,6 +34,7 @@ const Carousel = ({posts}) => {
             }}>
             {posts.map((post) => (
                 <CarouselCard
+                key={post.id}
                 post={post}/>
             ))}
             </div>

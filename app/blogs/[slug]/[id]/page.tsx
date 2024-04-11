@@ -1,6 +1,4 @@
 import React from 'react'
-import prisma from '@/utils/connect';
-import { NextResponse } from "next/server"
 import SinglePost from '@/app/components/SinglePost/SinglePost'
 import { getSinglePostByCatSlugAndSlug } from '@/app/api/functions';
 
