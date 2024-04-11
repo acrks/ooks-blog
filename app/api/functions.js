@@ -137,3 +137,41 @@ export const getSinglePostByCatSlugAndSlug = async (catSlug, slug) => {
         );
     }
 }
+
+export const getSinglePostById = async (id) => {
+    try {
+        const post = await prisma.post.findFirst({
+            where: {
+                id
+            },
+        })
+        return post
+    } catch (err) {
+        console.log(err)
+        return new NextResponse(
+            JSON.stringify({message: "Something went wrong!"}, {status: 500})
+        );
+    }
+}
+
+export const getCatThemeColor = (prepend, catSlug) => {
+    let str = "";
+    switch(prepend) {
+        case 'bg':
+            str = 'bg-';
+            break;
+        default:
+            break;
+    }
+    switch(catSlug) {
+        case 'orca-medical':
+            str += 'sky-600';
+            break;
+        case 'friday-chaser':
+            str += 'red-400';
+            break;
+        default:
+            break;
+    }
+    return str;
+}

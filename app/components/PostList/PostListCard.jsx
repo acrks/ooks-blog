@@ -1,12 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import {getDate} from '@/app/api/functions'
+import {getDate, getString, getCatThemeColor} from '@/app/api/functions'
 
 
 
 const PostListCard = ({img, title, desc, createdAt, catSlug, slug}) => {
-
   return (
     <div className='flex flex-row h-[400px] bg-[#16131a] rounded-lg drop-shadow-[0px_0px_5px_rgba(253,224,71,0.25)] hover:scale-[1.01] hover:drop-shadow-[0_0_10px_rgba(253,224,71,0.5)] transition-all duration-200'>
     {/* Image Container */}
@@ -19,6 +18,9 @@ const PostListCard = ({img, title, desc, createdAt, catSlug, slug}) => {
         <p className="text-[15px] font-light text-[color:var(--softTextColor)]">
           {getDate(createdAt)}
         </p>
+        <div className={`${getCatThemeColor('bg', catSlug)} uppercase flex flex-col items-center justify-center text-center rounded-full text-[15px] w-[150px] h-[40px]`}>
+          {getString(catSlug)}
+        </div>
         {/* Title */}
         <h1 className="text-[30px]">
           {title}
