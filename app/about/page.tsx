@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className="p-10 leading-loose">
+    <div className="page-div leading-loose">
       <h1 className="text-[60px] text-center">About Me</h1>
       <p>Hello there! My name is Alex Crooks, and I am a former political staffer turned software engineer with a passion for making simple solutions to complex problems.
       <br/>
