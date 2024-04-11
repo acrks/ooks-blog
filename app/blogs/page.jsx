@@ -10,7 +10,8 @@ const page = async () => {
   return (
     <div className='flex flex-col page-div gap-10'>
       {categories?.map((category) => (
-        <CategoryPagePostList 
+        <CategoryPagePostList
+        key={category.id} 
         {...category}/>
       ))}
     </div>
