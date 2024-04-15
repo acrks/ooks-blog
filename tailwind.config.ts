@@ -17,7 +17,10 @@ const config: Config = {
     },
     fontFamily: {
       mr: ["var(--font-mr)"],
-      in: ["var(--font-in)"]
+      in: ["var(--font-in)"],
+      so: ["var(--font-sora)"],
+      lx: ["var(--font-lx)"],
+      qu: ["var(--font-qu)"]
     }
   },
   plugins: [],

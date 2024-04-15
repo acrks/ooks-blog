@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Inter, Manrope, Sora, Lexend, Questrial } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import { cx } from "../utils/index";
@@ -17,6 +17,22 @@ const manrope = Manrope({
   display: "swap",
   variable: "--font-mr",
 });
+const sora = Sora({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sora",
+});
+const lexend = Lexend({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-lx",
+});
+const questrial = Questrial({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-qu",
+  weight: ["400"]
+});
 
 export const metadata: Metadata = {
   title: "OOKS BLOG",
@@ -32,9 +48,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cx(
-          inter.variable,
-          manrope.variable,
-          "font-mr bg-light dark:bg-dark"
+          questrial.variable,
+          "font-qu bg-light dark:bg-dark"
         )}
       >
         <AuthProvider>
