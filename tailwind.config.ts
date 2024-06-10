@@ -18,7 +18,7 @@ const config: Config = {
     fontFamily: {
       mr: ["var(--font-mr)"],
       in: ["var(--font-in)"],
-      so: ["var(--font-sora)"],
+      so: ["var(--font-so)"],
       lx: ["var(--font-lx)"],
       qu: ["var(--font-qu)"]
     }
